@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Lol</title>
+
+        <style>
+            .my-class {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+
+
+        <form id="form">
+
+            <input id="subject" type="text" placeholder="Subject" />
+
+            <input id="score" type="number" min="0" max="100" placeholder="Score e.g 60"  />
+
+            <input type="submit" />
+
+        </form>
+
+        <ol id="table">
+
+        </ol>
+
+        <table>
+            <thead>
+                <tr><th>S/N</th> <th>Subject</th> <th>Score</th> <th>Grade</th></tr>
+            </thead>
+
+            <tbody id="table-content">
+                
+            </tbody>
+        </table>
+
+
+        <div>
+            <p> <b>Average Score :</b> <strong> {}</strong> </p>
+            <p> <b>Total Score :</b> <strong> {}</strong> </p>
+        </div>
+
+
+        <script src="./jquery-3.7.1.min.js"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function () {
+
+                let count = 0;
+                let totalScore = 0;
+
+                $("#form").on("submit", function(e) {
+
+                    e.preventDefault()
+
+                    count = count + 1;
+
+                    const subject = $("#subject").val()
+
+                    const score = $("#score").val()
+
+                    $("#subject").val("")
+
+                    $("#score").val("")
+
+                    const grade =  "A" // write function to determine grade
+
+                    const tableContent = $("#table-content").html()
+
+                    const newRow =  "<tr> <td>" + count + "</td> <td>" + subject + "</td> <td>" + score + "</td> <td>" + grade + " </td> </tr>"
+
+                    $("#table-content").html(tableContent + newRow)
+
+                })
+    
+            })
+            
+        </script>
+
+    </body>
+</html>

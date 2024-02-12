@@ -1,0 +1,178 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.address {
+    background-color: #022245;
+    height: 40px;
+    color: white;
+    padding: 10px;
+    font-style: normal;
+}
+
+.address span {
+    margin-left: 20px;
+}
+
+.address span a {
+    margin-left: 20px;
+}
+
+.follow {
+    margin-right: 10px;
+    position: absolute;
+    right: 0px;
+}
+
+nav {
+    height: 80px;
+    background-color: white;
+    padding: 20px;
+}
+
+nav > * {
+    display: inline;
+}
+
+nav ul {
+    position: relative;
+    top: -28px;
+}
+
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 24px;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    color: #F95034;
+}
+
+
+.hero-section {
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://www.appclick.ng/assets/img/hero/appclick-academy-about-us-the-first-innvational-academy-company-in-lagos-ibadan-nigeria.jpg);
+    color: white;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 600px;
+}
+
+.hero-section .content {
+    position: absolute;
+    margin-top: 120px;
+    display: flex;
+    padding: 20px;
+}
+
+.hero-section .content  .left {
+    flex-basis: 60%;
+}
+
+
+.hero-section .content  .left h2 {
+    font-size: 56px;
+}
+
+.hero-section .content  .right {
+    flex-basis: 40%;
+}
+
+.container {
+	display: flex;
+    align-items: baseline;
+}
+
+.whatsapp {
+    position: fixed;
+    left: 25px;
+    bottom: 25px;
+    animation: bounce 1s;
+    animation-iteration-count: infinite;
+}
+
+.whatsapp > img {
+    border-radius: 100%;
+}
+
+
+@keyframes bounce {
+    0% {
+        bottom: 25px;
+    }
+    25% {
+        bottom: 30px;
+    }
+    50% {
+        bottom: 25px;
+    }
+    75% {
+        bottom: 20px;
+    }
+    100% {
+        bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    nav ul {
+        display: none;
+    }
+
+    .address {
+        display: none;
+    }
+
+    .hero-section h2 {
+        font-size: 28px;
+        width: 100%;
+    }
+
+    .hero-section {
+        background-position-x: -340px;   
+        height: 700px;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .hero-section .content  {
+        flex-direction: column;
+    }
+
+    .hero-section .content  .left {
+        flex-basis: 100%;
+    }
+    
+    
+    .hero-section .content  .left h2 {
+        font-size: 28px;
+    }
+    
+    .hero-section .content  .right {
+        flex-basis: 100%;
+    }
+    
+}

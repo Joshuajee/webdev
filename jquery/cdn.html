@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Lol</title>
+
+        <style>
+            .my-class {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body style="height: 1000px;">
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+        <script type="text/javascript">
+
+
+            $(function() {
+            // Handler for .ready() called.
+
+                $("body").on("mouseenter", function(event) {
+                    console.log(event.pageY)
+                    console.log(event)
+                })
+
+                $("button").on("mouseenter", function(e) {
+                    console.log(e.pageY)
+                    $(".one").slideToggle(1000)
+                })
+
+                $("h1").on("click", function() {
+        
+                })
+
+                $(document).on("keydown", function(event) {
+                    console.log(event.which)
+                        if (event.which=== 65) {
+                            alert("A")
+                        }
+                })
+
+                $(window).on("resize", function() {
+                    console.log("Yes")
+                    
+                })
+
+                $(window).on("scroll", function(event) {
+                    console.log("Scroll", window.pageYOffset)
+            
+                })
+            })
+
+        </script>
+
+        <input type="text" value="my name" />
+
+        <p josh="90" class="one two">Paragraph 1</p>
+        <p id="two">Paragraph 2</p>
+        <p >Paragraph 3</p>
+
+
+        <button>Click Me</button>
+
+        <h1 >Click Me</h1>
+
+        <script>
+
+            $(document).on("unload", function() {
+                alert("LEaving")
+            })
+        </script>
+
+    </body>
+</html>

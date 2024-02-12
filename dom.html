@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Title</title>
+    </head>
+    <body>
+
+        <ol id="list">
+        
+        </ol>
+
+        <input type="text" id="fruit" placeholder="Enter Fruit" />
+
+        <button id="add">Add</button>
+        
+
+
+    </body>
+    <script type="text/javascript">
+
+        function addItem () {
+            const value = input.value 
+            if (value.length < 3) {
+                alert("Length should be atleast 3 characters long")
+                return
+            } 
+
+            list.innerHTML = list.innerHTML + "<li>" + value + "</li>" 
+            input.value = ""
+        
+        }
+
+        const list = document.getElementById("list")
+
+        const add = document.getElementById("add")
+
+        const input = document.getElementById("fruit")
+
+        const fruits = ["apple", "banana", "orange"]
+
+        fruits.forEach(fruit => {
+            list.innerHTML = list.innerHTML + "<li>" + fruit + "</li>" 
+        })
+
+        add.addEventListener("click",  addItem)
+
+
+
+
+        // const obj =  {
+        //     firstName: "John",
+        //     lastName: "Mark",
+        //     age: 60
+        // }
+
+        // console.log(obj.firstName)
+
+        // console.log(obj)
+        
+    </script>
+
+    <script>
+        const pi  =  Math.PI
+
+        const radiusOfCircle = (radius) => {
+            return radius ** 2;
+        }
+
+        const var1 =  areaOfCircle(10, radiusOfCircle)
+
+        function areaOfCircle(radius, radiusSqauare) {
+            return pi * radiusSqauare(radius)
+        }
+
+
+
+
+
+    </script>
+
+
+
+
+
+</html>

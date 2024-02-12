@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Title</title>
+        <link rel="icon" href="favicon.ico" />
+        <style>
+            *{
+                margin: 0;
+                box-sizing: border-box;
+            }
+            .container {
+                display: flex; 
+                background-color: blue; 
+                min-height: 100vh;
+                height: 100%;
+                flex-direction: column;
+            
+            }
+
+        </style>
+    </head>
+    <body class="container">
+
+        <nav style="height: 80px; background-color: red;">
+            Navbar
+        </nav>
+
+
+        <!-- content -->
+        <div style="display: flex; background-color: orange; flex-grow: 1;">
+
+            <!-- sidebar -->
+            <section style="background-color: blueviolet; flex-basis: 280px; height: 1000px;">
+                sidebar
+            </section>
+
+
+            <!-- content -->
+            <section>
+                content
+            </section>
+
+        </div>
+
+        <footer style="background-color: green;">
+            Footer
+        </footer>
+
+
+    </body>
+</html>

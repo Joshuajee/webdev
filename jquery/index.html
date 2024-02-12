@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Lol</title>
+
+        <style>
+            .my-class {
+                background-color: red;
+            }
+        </style>
+    </head>
+    <body>
+
+        <input type="text" value="my name" />
+
+        <p josh="90" class="one two">Paragraph 1</p>
+        <p id="two">Paragraph 2</p>
+        <p >Paragraph 3</p>
+
+
+        <button>Click Me</button>
+
+        <h1>Click Me</h1>
+
+        <script src="./jquery-3.7.1.min.js"></script>
+
+        <script type="text/javascript">
+
+            $("button").on("mouseenter", function() {
+                $(".one").slideToggle(1000)
+            })
+
+            $("h1").on("click", function() {
+     
+            })
+
+            $(document).on("keydown", function(event) {
+                console.log(event.which)
+                    if (event.which=== 65) {
+                        alert("A")
+                    }
+            })
+
+            $( document ).ready(function() {
+                console.log("reADY")
+            });
+
+            
+
+            console.log("NOT READY")
+
+
+
+        </script>
+
+    </body>
+</html>

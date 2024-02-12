@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-size: 20px;
+    line-height: normal;
+}
+
+body {
+    background-color: #413B86;
+    padding: 100px;
+}
+
+.one {
+    margin: auto;
+    background-color: #4BC9F8;
+    height: 500px;
+    width: 800px;
+    padding: 50px;
+    padding-top: 30px;
+}
+
+.two {
+    background-color: #3B2E6C;
+    height: 400px;
+    width: 700px;
+    padding: 50px;
+    padding-top: 30px;
+}
+
+.three {
+    background-color: #5063B3;
+    height: 300px;
+    width: 600px;
+    padding: 50px;
+    padding-top: 30px;
+}
+
+
+.four {
+    background-color: yellow;
+    height: 200px;
+    width: 500px;
+    padding-top: 85px;
+    text-align: center;
+
+}
