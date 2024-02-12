@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Title</title>
+        <link rel="icon" href="favicon.ico" />
+
+        <style>
+            .username-error {
+                display: none;
+                color: red;
+                font-size: 12px;
+            }  
+
+            .transition {
+                transform: rotate(360deg);
+                transition: 2s;
+            }
+
+            .transition-back {
+                transform: rotate(-360deg);
+                transition: 2s;
+            }
+        </style>
+  
+    </head>
+
+    <body>
+
+        <form id="form">
+
+            <input id="username" type="text" placeholder="enter username" />
+
+            <p id="username-error" class="username-error">Too short</p>
+
+            <input id="password" type="password"  placeholder="enter password"/>
+
+            <input id="checkbox" type="checkbox" />
+
+            <input id="submit" type="submit" />
+
+        </form>
+
+        <div id="square" style="height: 300px; width: 300px; background-color: red;">
+d
+
+        </div>
+<!-- 
+    sumbit
+    change
+    focus
+    blur
+ -->
+  
+
+    </body>
+
+    <script type="text/javascript">
+
+        const form = document.getElementById("form")
+
+        const username = document.getElementById("username")
+
+        const usernameError = document.getElementById("username-error")
+
+        const submit = document.getElementById("submit")
+
+        let hasError = false
+
+        form.addEventListener("submit", (e)=> {
+            e.preventDefault()
+            if (hasError) {
+                alert("ERROR")
+                return
+            }
+            console.log("Submit")
+           
+        })
+
+        username.addEventListener("change", () => {
+
+            const value = username.value
+
+            if (value.length < 3) {
+                usernameError.style.display = "block"
+                usernameError.textContent =  "Too short minimum of 3 characters"
+                hasError =  true
+            } else if (value.length > 6) {
+                usernameError.style.display = "block"
+                usernameError.textContent =  "Too long maximum of 6 characters"
+                hasError= true
+            } else {
+                usernameError.style.display = "none"
+                hasError =  false
+            }
+
+        })
+
+        username.addEventListener("focus", ()=> {
+            
+            username.style.outline = "2px solid green"
+        } )
+
+        username.addEventListener("blur", ()=> {
+       
+
+            username.style.outline = "none"
+        } )
+
+        const square  = document.getElementById("square")
+
+        square.addEventListener("mouseenter", () => {
+            square.style.backgroundColor  = "blue"
+            square.classList.add("transition")
+            square.classList.remove("transition-back")
+        })
+
+        square.addEventListener("mouseout", () => {
+            square.style.backgroundColor  = "green"
+            square.classList.add("transition-back")
+            square.classList.remove("transition")
+        })
+
+    </script>
+
+</html>
